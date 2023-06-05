@@ -96,8 +96,6 @@ class Diagram:
                 if key > 0:
                     new_forest[key + 1] = forest[key]
             new_forest[0], new_forest[1] = self.get_tree(0).divide()
-        elif letter.lower() == 'c':
-            return self
         else:
             raise Exception('Invalid input')
         return Diagram(new_forest)

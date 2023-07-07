@@ -43,6 +43,8 @@ class Leaf(Tree):
 class Diagram:
     def __init__(self, forest: dict[int, Tree]):
         self.forest = forest
+        self.basepoint = self.get_tree(0).interval[0]
+        self.reduce()
 
     def get_tree(self, index):
         forest = self.forest
@@ -59,7 +61,7 @@ class Diagram:
 
     def get_intervals(self):
         intervals = []
-        min_key, max_key = min(self.forest.keys()), max(self.forest.keys())
+        min_key, max_key = min(*self.forest.keys(), 0), max(*self.forest.keys(), 0)
         for index in range(min_key, max_key + 1):
             intervals += self.get_tree(index).get_intervals()
         return intervals
@@ -71,7 +73,7 @@ class Diagram:
             if tree.is_leaf and tree.interval[1] - tree.interval[0] == 1:
                 del forest[key]
         if not forest:
-            self.forest = {0: Leaf((0, 1))}
+            self.forest = {0: Leaf((self.basepoint, self.basepoint + 1))}
 
     def apply_letter(self, letter):
         forest = self.forest

@@ -10,4 +10,5 @@ def semicircle_path(left_end, right_end, N=100):
     path = f'M {x[0]}, {y[0]}'
     for k in range(1, len(t)):
         path += f'L{x[k]}, {y[k]}'
+    path += f'M {left_end}, {0}'
     return path

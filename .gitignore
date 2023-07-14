@@ -1,4 +1,4 @@
-/py_cache/
+/__py_cache__/
 /actions-description.py
 /inequalities-generator.py
 /test.py

@@ -1,4 +1,4 @@
-from dash import Dash, html, dcc, callback, Output, Input
+from dash import Dash, html, dcc, Output, Input
 from diagram_plot import draw_diagram
 
 

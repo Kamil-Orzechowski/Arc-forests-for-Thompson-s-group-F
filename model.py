@@ -59,12 +59,14 @@ class Diagram:
         translation = forest[max_key].interval[1] - max_key
         return Leaf((index + translation - 1, index + translation))
 
-    def get_intervals(self):
-        intervals = []
+    def get_intervals(self, maximal_only=False):
         min_key, max_key = min(*self.forest.keys(), 0), max(*self.forest.keys(), 0)
+        if maximal_only:
+            return [self.get_tree(index).interval for index in range(min_key, max_key + 1)]
+        intervals = []
         for index in range(min_key, max_key + 1):
             intervals += self.get_tree(index).get_intervals()
-        return intervals
+        return intervals    
 
     def reduce(self):
         forest = self.forest

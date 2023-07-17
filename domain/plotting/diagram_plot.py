@@ -1,5 +1,5 @@
 import plotly.graph_objects as go
-from arc_plot import semicircle_path
+from domain.plotting.arc_plot import semicircle_path
 from fractions import Fraction
 from model import trivial_diagram
 

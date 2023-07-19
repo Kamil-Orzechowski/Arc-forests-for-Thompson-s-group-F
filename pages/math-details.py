@@ -13,20 +13,23 @@ def layout():
             # Mathematical details
                      
             We will give a precise definition of what is called *Thompson's group $F$* in mathematics, especially group theory. 
-            This algebraic object can be defined in one of several ways. We decide to choose an approach where the elements of $F$ are
-            some piecewise-linear bijections of the set $\mathbb{R}$ of real numbers.
+            This algebraic object can be defined in one of several ways. For a thorough treatment of the topic we refer to \[2\].
+            We decide to choose an approach where the elements of $F$ are
+            some piecewise-linear bijections of the set $\mathbb{R}$ of real numbers (as in \[2\], Section 1.4).
 
-            We will adhere to the convention of writing $fg$ for the composition of functions $f$ and $g$ with the meaning that $g$ acts on the argument first, then $f$ acts on the result, i.e. $fg(x)=f(g(x))$ for all $x$.
+            We will adhere to the convention of writing $fg$ for the composition of functions $f$ and $g$ with the meaning that $g$ acts on the argument first,
+            then $f$ acts on the result, i.e. $fg(x)=f(g(x))$ for all $x$.
             By a *dyadic rational* we mean a rational number represented by a fraction with denominator $2^k$ for some integer $k\ge 0$.
 
             ## Definition of the group
             *Thompson's group $F$* is the group of all functions $f: \mathbb{R} \to \mathbb{R}$ satisfying the following conditions:
             - $f$ is an increasing bijection;
-            - there are finitely many dyadic rationals (called *breakpoints*) $x_1 < \dots < x_n$ such that $f$ restricted to each of the intervals $[x_i, x_{i+1}]$ for $1\le i<n$, is a linear function with slope $2^k$ for some integer $k$;  
+            - there are finitely many dyadic rationals (called *breakpoints*) $x_1 < \dots < x_n$ such that $f$ restricted to each of the intervals $[x_i, x_{i+1}]$ for $1\le i<n$,
+            is a linear function with slope $2^k$ for some integer $k$;  
             - there exist $l, m\in\mathbb{Z}$ such that $f(x) = x + l$  for $x \le x_1$ and $f(x) = x + m$ for $x\ge x_n$.
 
             ## Finite presentation and generators
-            It is known that Thompson's group $F$ admits the following presentation:
+            It is known (see \[2\], Section 2.4) that Thompson's group $F$ admits the following presentation:
             $$\left<a,b \;|\; [ab^{-1}, a^{-1}ba], \, [ab^{-1}, a^{-2}ba^{2}\right>,$$
             where $[g, h]:=ghg^{-1}h^{-1}$ denotes the commutator of $g$ and $h$.
             This presentation maps abstract letters $a$, $b$ to the elements $f_a, f_b \in F$ given by
@@ -41,10 +44,13 @@ def layout():
             The functions defined above are called the *standard generators* of $F$.
 
             ## Interpretation as *arc forest diagrams*
-            In the literature, there are several ways of visualizing the elements of $F$. They can be regarded as pairs of binary rooted trees or pairs of infinite forests consisting of such trees. The latter approach was decribed by Belk.
-            Guba and Sapir studied $F$ as a *diagram group*, where the diagrams resembled some collection of arcs.
+            In the literature, there are several ways of visualizing the elements of $F$. They can be regarded as pairs of binary rooted trees or pairs of infinite forests consisting of such trees.
+            The latter approach was described by Belk (see \[1\]).
+            V. Guba and M. Sapir studied $F$ as a *diagram group* (see \[3\]), where the diagrams resembled some collection of arcs.
 
-            We will introduce an interpretation of $F$ in which any element of $F$ can be represented by a diagram consisting of one infinite forest instead of two. Such a forest is built from subintervals of $\mathbb{R}$, which could then be drawn in a picture in form of arcs (semicircles). These diagrams build a bridge between the approaches of Belk and Guba, Sapir.
+            We will introduce an interpretation of $F$ in which any element of $F$ can be represented by a diagram consisting of one infinite forest instead of two.
+            Such a forest is built from subintervals of $\mathbb{R}$,
+            which could then be drawn in a picture in form of arcs (semicircles). These diagrams build a bridge between the approaches of Belk and Guba, Sapir.
 
             Let us proceed to the formal definitions.
 
@@ -66,13 +72,28 @@ def layout():
 
             ### The correspondence between elements of $F$ and diagrams
             Let $f$ be an element of Thompson's group $F$. We will associate a forest and, subsequently, a diagram $D(f)$ with $f$ according to the following algorithm.
+            
             1. For each $n\in\mathbb{Z}$ start constructing a tree $T_n$ by defining its root as the interval $I_n=[f(n), f(n+1)]$.
+            
             2. If $f$ is linear on $[n, n+1]$, we stop the construction of $T_n$. From the definition of $F$ it follows that, for sufficiently large and sufficiently small $n$, the construction of $T_n$ will be terminated, ending up with a trivial tree.
+            
             3. If $f$ is not linear on $[n, n+1]$, we divide that interval into halves and declare the left and right child of $I_n$ to be the image under $f$ of the left and, respectively, right half of $I_n$.
+            
             4. We proceed in a loop applying points 2 and 3 to all leaves $L$ of the forest that we have constructed so far, but taking $f^{-1}(L)$ instead of $[n, n+1]$ and $L$ instead of $L$.
+            
             5. The construction of the forest is complete when $f$ is linear on  $f^{-1} (L)$ for all the leaves.
+            
             6. We transform the forest into a diagram replacing all intervals by arcs and picking $f(0)$ as the basepoint.
 
             It is not hard to check that the correspondence $f\mapsto D(f)$ is one-to-one and for any diagram we can reconstruct the corresponding element of $F$.
+            
+            # References
+
+            1. J. Belk, K. Brown, *Forest Diagrams for Elements of Thompson's group F*, International Journal of Algebra and Computation, vol. 15, no. 05n06.
+
+            2. J. Burillo, *Introduction to Thompson’s group F*, available at https://web.mat.upc.edu/pep.burillo/F%20book.pdf. 
+
+            3. V. Guba, M. Sapir, *Diagram groups*, Memoirs of the Amer. Math. Soc. 130, N 620, 1997, 1–117.
         ''', mathjax=True)
-    ])
+    ],
+        style={'marginLeft': 25, 'marginRight': 25, 'marginTop': 15, 'marginBottom': 15})

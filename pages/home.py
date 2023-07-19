@@ -22,12 +22,13 @@ def layout():
             of $F$ in the finite presentation
             $$\left<a,b \;|\; [ab^{-1}, a^{-1}ba], \, [ab^{-1}, a^{-2}ba^{2}\right>$$
             and $A=a^{-1}$, $B=b^{-1}$ stand for their inverses.
-            The application returns the arc forest diagram for the element of $F$ given by $w$.
-            In a trivial case $w$ may be the empty word, which will result showing the trivial diagram representing the
+            The application returns the arc forest diagram for the element of $F$ given by $w$. The maximal arcs, i.e those having
+            no other arcs above them in the plane, are distinguished by a thicker line. The basepoint is marked by a dot on the $x$ axis.
+            In a trivial case $w$ may be the empty word, which will result in showing the trivial diagram representing the
             identity element of $F$.
         ''', mathjax=True),
         html.Div(children=[
-            'For a more detailed mathematical desription of all the notions mentioned above we refer to the page ',
+            'For a more detailed mathematical description of all the notions mentioned above we refer to the page ',
             dcc.Link('mathematical details.',
                      href=dash.page_registry['pages.math-details']['path']),
             html.P()
@@ -54,7 +55,8 @@ def layout():
         dcc.RadioItems(id='format', options=[
             'decimal', 'dyadic fraction'], value='decimal'),
         dcc.Graph(id='diagram', figure={})
-    ])
+    ],
+        style={'marginLeft': 25, 'marginRight': 25, 'marginTop': 15, 'marginBottom': 15})
 
 
 @callback(

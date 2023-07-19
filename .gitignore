@@ -1,4 +1,7 @@
 /__pycache__/
+/pages/__pycache__
+/domain/plotting/__pycache__
+/domain/__pycache__
 /domain/actions-description.py
 /domain/inequalities-generator.py
 domain/test.py

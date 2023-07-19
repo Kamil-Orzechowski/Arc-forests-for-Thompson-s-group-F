@@ -1,7 +1,7 @@
 import plotly.graph_objects as go
 from domain.plotting.arc_plot import semicircle_path
 from fractions import Fraction
-from model import trivial_diagram
+from domain.model import trivial_diagram
 
 
 def draw_diagram(word: str, trivial_tail_length=100, range_around_center=5, center='zero', format='decimal'):

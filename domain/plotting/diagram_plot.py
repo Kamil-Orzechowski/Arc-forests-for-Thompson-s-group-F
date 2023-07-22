@@ -24,10 +24,10 @@ def draw_diagram(word: str, trivial_tail_length=100, range_around_center=5, cent
                  line_color='green') for interval in intervals
             ]
     x_ticks = [intervals[0][0]] + [interval[1] for interval in intervals]
-    x_center = basepoint if center == 'the basepoint' else 0
+    x_center = basepoint if center == 'basepoint' else 0
     x_range = [x_center - range_around_center, x_center + range_around_center]
     x_labels = [str(Fraction(number))
-                for number in x_ticks] if format == 'dyadic fraction' else x_ticks
+                for number in x_ticks] if format == 'dyadic' else x_ticks
 
     fig = go.Figure()
     fig.update_layout(shapes=arcs)

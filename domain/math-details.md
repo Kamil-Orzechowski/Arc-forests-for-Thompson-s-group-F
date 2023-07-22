@@ -13,7 +13,7 @@ By a *dyadic rational* we mean a rational number represented by a fraction with 
 - there are finitely many dyadic rationals (called *breakpoints*) $x_1 < \dots < x_n$ such that $f$ restricted to each of the intervals $[x_i, x_{i+1}]$ for $1\le i<n$, is a linear function with slope $2^k$ for some integer $k$;  
 - there exist $l, m\in\mathbb{Z}$ such that $f(x) = x + l$  for $x \le x_1$ and $f(x) = x + m$ for $x\ge x_n$.
 
-## Finite presentation and generators
+### Finite presentation and generators
 It is known that Thompson's group $F$ admits the following presentation:
 $$\left<a,b \;|\; [ab^{-1}, a^{-1}ba], \, [ab^{-1}, a^{-2}ba^{2}\right>,$$
 where $[g, h]:=ghg^{-1}h^{-1}$ denotes the commutator of $g$ and $h$.
@@ -68,6 +68,19 @@ Let $f$ be an element of Thompson's group $F$. We will associate a forest and, s
 6. We transform the forest into a diagram replacing all intervals by arcs and picking $f(0)$ as the basepoint.
 
 It is not hard to check that the correspondence $f\mapsto D(f)$ is one-to-one and for any diagram we can reconstruct the corresponding element of $F$.
+
+### Actions of the standard generators on diagrams
+
+Arc forest diagrams are especially convenient to show how the standard generators act on $F$ group elements from the right.
+Let $f\in F$ be a fixed element and $D(f)$ the corresponding diagram.
+First, notice that the basepoint of $D(f)$ belongs to precisely two maximal arcs, the left and right one, representing the root intervals of $T_{-1}$ and $T_0$, respectively.
+
+- $D(ff_a)$ is obtained from $D(f)$ by moving the basepoint to the left, one step along the left maximal arc containing the basepoint.
+Similarly, $D(ff_{a^{-1}})$ is obtained by moving the basepoint one step to the right.
+
+- In order to get $D(ff_b)$ from $D(f)$, we remove the right maximal arc containing the basepoint without changing the position of the basepoint. In a special situation, when there were no arcs below the deleted arc (which joined points with coordinates $a$ and $b$ on the $x$ axis), we introduce two new maximal arcs with equal diameters, namely one joining $a$ with $\frac{a+b}{2}$ and one joining $\frac{a+b}{2}$ with $b$.
+
+- In order to get $D(ff_{b^{-1}})$ from $D(f)$, we consider the right maximal arc containing the basepoint and the subsequent maximal arc one step to the right. We "cover" them with a new maximal arc joining the trees $T_{0}$ and $T_{1}$ in the underlying forest. As before, we do not change the basepoint. In a special situation, when the covered arcs are minimal ones (i.e. they have no arcs below) and have the same diameter, we remove them afterwards.
 
 # References
 

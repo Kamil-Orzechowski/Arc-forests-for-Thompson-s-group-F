@@ -1,5 +1,5 @@
-/__pycache__/
-/actions-description.py
-/inequalities-generator.py
-/test.py
+/domain/actions-description.py
+/domain/inequalities-generator.py
+/domain/test.py
 /.vscode/
+**/__pycache__

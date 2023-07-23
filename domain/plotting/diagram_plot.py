@@ -1,7 +1,7 @@
 import plotly.graph_objects as go
-from arc_plot import semicircle_path
+from domain.plotting.arc_plot import semicircle_path
 from fractions import Fraction
-from model import trivial_diagram
+from domain.model import trivial_diagram
 
 
 def draw_diagram(word: str, trivial_tail_length=100, range_around_center=5, center='zero', format='decimal'):
@@ -20,12 +20,14 @@ def draw_diagram(word: str, trivial_tail_length=100, range_around_center=5, cent
 
     arcs = [dict(type="path",
                  path=semicircle_path(interval[0], interval[1]),
-                 line_width=3 if interval in maximal_intervals else 2) for interval in intervals]
+                 line_width=3 if interval in maximal_intervals else 2,
+                 line_color='green') for interval in intervals
+            ]
     x_ticks = [intervals[0][0]] + [interval[1] for interval in intervals]
-    x_center = basepoint if center == 'the basepoint' else 0
+    x_center = basepoint if center == 'basepoint' else 0
     x_range = [x_center - range_around_center, x_center + range_around_center]
     x_labels = [str(Fraction(number))
-                for number in x_ticks] if format == 'dyadic fraction' else x_ticks
+                for number in x_ticks] if format == 'dyadic' else x_ticks
 
     fig = go.Figure()
     fig.update_layout(shapes=arcs)
@@ -46,7 +48,10 @@ def draw_diagram(word: str, trivial_tail_length=100, range_around_center=5, cent
         'y': -0.25,
         'xanchor': 'center',
         'yanchor': 'bottom',
-    })
+    },
+        title={'text': 'Arc forest diagram',
+               'x': 0.5,
+               'font_size': 25})
     fig.add_trace(go.Scatter(x=[basepoint], y=[0],
                              mode='markers',
                              marker_size=10,

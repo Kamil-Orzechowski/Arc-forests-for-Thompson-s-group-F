@@ -11,7 +11,11 @@ The aim of this project is to give a new approach to visualize the elements of t
 
 The application is built with [Dash](https://dash.plotly.com/) and Plotly for Python. It also uses [NumPy](https://numpy.org/).
 
-## Installation
+## Getting started
+
+The application is hosted on a remote cloud server by *Render*. You can access it at the URL https://arc-forests-for-thompson-s-group-f.onrender.com/.
+
+If you wish to run the application locally, follow the steps listed below.
 
 1. Ensure you have the latest version of Python installed on your machine. You can download it from https://www.python.org/.
 

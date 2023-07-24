@@ -2,8 +2,8 @@
 
 ## About the project
 
-*Thompson's group $F$* is an object studied in mathematics, especially in group theory, which is a branch of abstract algebra.
-A more detailed introduction is included in the [file](/domain/math-details.md). You may well also want to read about Thompson's groups in the [Wikipedia article](https://en.wikipedia.org/wiki/Thompson_groups).
+*Thompson's group* $F$ is an object studied in mathematics, especially in group theory, which is a branch of abstract algebra.
+A more detailed introduction is included in the project pages. You may well also want to read about Thompson's groups in the [Wikipedia article](https://en.wikipedia.org/wiki/Thompson_groups).
 
 The aim of this project is to give a new approach to visualize the elements of the group $F$ as what we called *arc forest diagrams*. These diagrams are a convenient illustration of how the standard generators of $F$ (from a finite presentation) act on $F$ from the right. Our approach is a slight modification of those found in papers of J. Belk, V. Guba and M. Sapir.
 

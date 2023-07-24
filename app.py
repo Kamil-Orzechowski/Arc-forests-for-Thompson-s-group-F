@@ -1,7 +1,5 @@
 import dash
-from dash import Dash, html, dcc, Output, Input
-from domain.plotting.diagram_plot import draw_diagram
-
+from dash import Dash, html
 
 app = Dash(__name__, use_pages=True)
 

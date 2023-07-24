@@ -4,7 +4,7 @@ from fractions import Fraction
 from domain.model import trivial_diagram
 
 
-def draw_diagram(word: str, trivial_tail_length=100, range_around_center=5, center='zero', format='decimal'):
+def draw_diagram(word, trivial_tail_length=100, range_around_center=5, center='zero', format='decimal'):
     diagram = trivial_diagram.apply_word(word)
     basepoint = diagram.basepoint
     intervals = diagram.get_intervals()

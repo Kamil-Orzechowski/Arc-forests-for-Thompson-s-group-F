@@ -41,7 +41,7 @@ class Leaf(Tree):
 
 
 class Diagram:
-    def __init__(self, forest: dict[int, Tree]):
+    def __init__(self, forest):
         self.forest = forest
         self.basepoint = self.get_tree(0).interval[0]
         self.reduce()

@@ -37,7 +37,7 @@ def layout():
         ''', mathjax=True),
         html.Div(children=[
             'For a more detailed mathematical description of all the notions mentioned above we refer to the page ',
-            dcc.Link('mathematical details.',
+            dcc.Link('Mathematical details.',
                      href=dash.page_registry['pages.math-details']['path']),
             html.P()
         ]

@@ -20,7 +20,7 @@ def layout():
             
             The expected input is a word $w$ over the alphabet $\{a, A, b, B\}$, where $a, b$ represent the standard generators
             of $F$ in the finite presentation
-            $$\left<a,b \;|\; [ab^{-1}, a^{-1}ba], \, [ab^{-1}, a^{-2}ba^{2}\right>$$
+            $$\left<a,b \;|\; [ab^{-1}, a^{-1}ba], \, [ab^{-1}, a^{-2}ba^{2}]\right>$$
             and $A=a^{-1}$, $B=b^{-1}$ stand for their inverses.
             The application returns the arc forest diagram for the element of $F$ given by $w$. The maximal arcs, i.e those having
             no other arcs above them in the plane, are distinguished by a thicker line. The basepoint is marked by a dot on the $x$ axis.

@@ -15,7 +15,7 @@ By a *dyadic rational* we mean a rational number represented by a fraction with 
 
 ### Finite presentation and generators
 It is known that Thompson's group $F$ admits the following presentation:
-$$\left<a,b \;|\; [ab^{-1}, a^{-1}ba], \, [ab^{-1}, a^{-2}ba^{2}\right>,$$
+$$\left<a,b \;|\; [ab^{-1}, a^{-1}ba], \, [ab^{-1}, a^{-2}ba^{2}]\right>,$$
 where $[g, h]:=ghg^{-1}h^{-1}$ denotes the commutator of $g$ and $h$.
 This presentation maps abstract letters $a$, $b$ to the elements $f_a, f_b \in F$ given by
 $$f_a(x)= x - 1 \quad\text{for } x \in \mathbb{R};\qquad 
